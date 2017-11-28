@@ -16,10 +16,12 @@ public interface UserMapper {
 
     int updateByPrimaryKey(User record);
 
+    //检查用户名是否存在
     int checkUsername(String username);
 
     int checkEmail(String email);
-
+    
+    //登录检查用户名 密码
     User selectLogin(@Param("username") String username, @Param("password")String password);
 
     String selectQuestionByUsername(String username);
